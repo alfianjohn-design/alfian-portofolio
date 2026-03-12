@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio pribadi mahasiswa IT yang tertarik pada AI dan Web Development." />
+    <meta name="keywords" content="portfolio, web developer, AI, mahasiswa IT, Laravel, Python" />
+    <meta name="author" content="Alfian Miftakhul Yasir" />
+    <title>Portfolio | Alfian Miftakhul Yasir</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Cek preferensi user (mencegah kedipan gaya seketika / FOUC) -->
+    <script>
+        if (localStorage.getItem('theme') === 'light' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <!-- Logo / Brand -->
+            <a href="#home" class="nav-logo">
+                &lt;<span>BangAL</span>/&gt;
+            </a>
+
+            <!-- Navigation Links -->
+            <nav>
+                <!-- Hamburger Menu Button (Untuk Mobile) -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Buka navigasi menu">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <!-- Tombol Dark/Light Mode -->
+                    <li class="nav-theme-item">
+                        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                            <span class="theme-icon light-icon" style="display: none;">☀️</span>
+                            <span class="theme-icon dark-icon">🌙</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- ===================== END NAVBAR ===================== -->
+
+
+    <!-- ===================== HERO SECTION ===================== -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+
+            <!-- Foto Profil Bulat -->
+            <div class="hero-photo">
+                <img src="profile.png" alt="Foto Profil - Alfian Miftakhul Yasir" class="profile-img" />
+                <!-- Dekorasi lingkaran -->
+                <div class="photo-ring"></div>
+            </div>
+
+            <!-- Teks Hero -->
+            <div class="hero-text">
+                <p class="hero-greeting">Halo, perkenalkan saya</p>
+                <h1 class="hero-name">Alfian Miftakhul Yasir</h1>
+                <p class="hero-tagline">
+                    Mahasiswa Teknik Informatika | <span class="accent">Web &amp; AI Enthusiast</span>
+                </p>
+                <p class="hero-desc">
+                    Berfokus pada perancangan solusi digital yang inovatif dan terukur. Menggabungkan praktik terbaik
+                    dalam pengembangan web modern dengan integrasi sistem kecerdasan buatan untuk menciptakan aplikasi
+                    yang berdampak nyata.
+                </p>
+
+                <!-- Tombol CTA -->
+                <div class="hero-buttons">
+                    <a href="cv.pdf" download class="btn btn-primary" id="btn-download-cv">
+                        ⬇ Download CV
+                    </a>
+                    <a href="#projects" class="btn btn-outline" id="btn-see-projects">
+                        Lihat Projects
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Dekorasi background blob -->
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+    </section>
+    <!-- ===================== END HERO SECTION ===================== -->
+
+
+    <!-- ===================== ABOUT ME ===================== -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-header">
+                <span class="section-label">Tentang</span>
+                <h2 class="section-title">About <span class="accent">Me</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Konten About -->
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <img src="profile.png" alt="About - Alfian Miftakhul Yasir" class="about-img" />
+                    <div class="about-badge">
+                        <span class="badge-number">2+</span>
+                        <span class="badge-label">Tahun<br />Pengalaman</span>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <h3 class="about-subtitle">Mahasiswa Teknik Informatika &amp; AI Enthusiast</h3>
+                    <p>
+                        Sebagai mahasiswa yang memiliki ketertarikan mendalam pada bidang <strong>Kecerdasan Buatan
+                            (AI)</strong> dan <strong>Pengembangan Web</strong>, saya meyakini bahwa teknologi memiliki
+                        peran krusial dalam menghadirkan solusi konkret untuk berbagai permasalahan. Fokus saya adalah
+                        mengintegrasikan inovasi tersebut guna menciptakan sistem yang lebih efisien dan terukur.
+                    </p>
+                    <p>
+                        Melalui pencapaian akademis dan pengalaman proyek, saya telah merancang berbagai produk digital
+                        — mulai dari arsitektur backend kokoh menggunakan <strong>Laravel</strong>, hingga implementasi
+                        <i>Computer Vision</i> menggunakan arsitektur <strong>YOLO</strong> berbasis Python.
+                    </p>
+                    <p>
+                        Saya selalu antusias untuk melakukan riset teknologi terkini, mengasah keterampilan teknis,
+                        serta berkolaborasi dalam lingkungan profesional untuk memecahkan masalah secara analitis.
+                    </p>
+
+                    <!-- Info detail -->
+                    <ul class="about-details">
+                        <li><span class="detail-label">📍 Lokasi:</span> Indonesia</li>
+                        <li><span class="detail-label">🎓 Status:</span> Mahasiswa Aktif</li>
+                        <li><span class="detail-label">💼 Fokus:</span> AI &amp; Web Development</li>
+                        <li><span class="detail-label">📧 Email:</span> alfianjohn@students.unnes.ac.id</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===================== END ABOUT ME ===================== -->
+
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="skills section-padding" id="skills">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-header">
+                <span class="section-label">Keahlian</span>
+                <h2 class="section-title">My <span class="accent">Skills</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Grid Skill Cards -->
+            <div class="skills-grid">
+
+                <!-- Skill: HTML -->
+                <div class="skill-card" id="skill-html">
+                    <div class="skill-icon html-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 3L5.5 19L12 21L18.5 19L20 3H4Z" stroke="currentColor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <path d="M16 7H8L8.5 12H15.5L15 16L12 17L9 16L8.8 14" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">HTML5</h3>
+                    <p class="skill-desc">Markup semantik &amp; struktur web yang solid dan aksesibel.</p>
+                </div>
+
+                <!-- Skill: CSS -->
+                <div class="skill-card" id="skill-css">
+                    <div class="skill-icon css-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 3L5.5 19L12 21L18.5 19L20 3H4Z" stroke="currentColor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <path d="M16 7H8L8.5 10H15.5L15.2 13L12 14L8.8 13L8.6 11" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <p class="skill-desc">Styling modern dengan Flexbox, Grid, animasi, dan desain responsif.</p>
+                </div>
+
+                <!-- Skill: Laravel -->
+                <div class="skill-card" id="skill-laravel">
+                    <div class="skill-icon laravel-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="1.5"
+                                stroke-linejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Laravel</h3>
+                    <p class="skill-desc">Framework PHP untuk membangun aplikasi web backend yang kuat &amp;
+                        terstruktur.</p>
+                </div>
+
+                <!-- Skill: Python -->
+                <div class="skill-card" id="skill-python">
+                    <div class="skill-icon python-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C8.13 2 8 3.57 8 5V7H12V8H5C3.34 8 2 9.34 2 11V14C2 15.66 3.34 17 5 17H7V14.5C7 12.84 8.34 11.5 10 11.5H14C15.1 11.5 16 10.6 16 9.5V5C16 3.4 14.6 2 13 2H12Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                            <path
+                                d="M12 22C15.87 22 16 20.43 16 19V17H12V16H19C20.66 16 22 14.66 22 13V10C22 8.34 20.66 7 19 7H17V9.5C17 11.16 15.66 12.5 14 12.5H10C8.9 12.5 8 13.4 8 14.5V19C8 20.6 9.4 22 11 22H12Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <p class="skill-desc">Pemrosesan data, scripting otomatisasi, dan pengembangan model <i>Machine
+                            Learning</i>.</p>
+                </div>
+
+                <!-- Skill: AI / YOLO -->
+                <div class="skill-card" id="skill-ai">
+                    <div class="skill-icon ai-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M12 2V5M12 19V22M22 12H19M5 12H2" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M19.07 4.93L17 7M7 17L4.93 19.07M19.07 19.07L17 17M7 7L4.93 4.93"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Computer Vision &amp; YOLO</h3>
+                    <p class="skill-desc">Analisis citra tingkat lanjut dan deteksi objek <i>real-time</i> menggunakan
+                        arsitektur YOLO terbaru.</p>
+                </div>
+
+                <!-- Skill: Git -->
+                <div class="skill-card" id="skill-git">
+                    <div class="skill-icon git-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18" cy="6" r="2" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="6" cy="18" r="2" stroke="currentColor" stroke-width="1.5" />
+                            <circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M6 16V12C6 9.79 7.79 8 10 8H14" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M18 8V16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="skill-name">Git &amp; GitHub</h3>
+                    <p class="skill-desc">Version control, kolaborasi tim, dan deployment via GitHub Pages.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== END SKILLS ===================== -->
+
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="experience section-padding" id="experience">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-header">
+                <span class="section-label">Perjalanan</span>
+                <h2 class="section-title">Edukasi &amp; <span class="accent">Pengalaman</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+
+                <!-- Item 1: Diskominfo -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2 Februari - 2 Juli 2026</span>
+                        <h3 class="timeline-title">Web Developer Intern</h3>
+                        <h4 class="timeline-subtitle">Diskominfo Kab. Wonosobo</h4>
+                        <p class="timeline-desc">
+                            Berperan aktif dalam rekayasa dan pengembangan web instansi/dinas daerah secara dinamis
+                            (maintenance & penambahan fitur baru). Termasuk di antaranya penyusunan dan pengembangan
+                            proyek web fungsional personal (WonosoboHub) sebagai output dari program magang.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2: UNNES -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 - Sekarang</span>
+                        <h3 class="timeline-title">Mahasiswa S1 - Pendidikan Teknik Informatika &amp; Komputer</h3>
+                        <h4 class="timeline-subtitle">Universitas Negeri Semarang (UNNES)</h4>
+                        <p class="timeline-desc">
+                            Berfokus pada peminatan keilmuan teknologi serta vokasional di bidang perangkat lunak. Aktif
+                            dalam pengembangan (research &amp; development) proyek-proyek inovatif dengan integrasi
+                            Artificial Intelligence / Computer Vision berbasis teknologi fungsional terkini.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ===================== END EXPERIENCE ===================== -->
+
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="projects section-padding" id="projects">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-header">
+                <span class="section-label">Karya</span>
+                <h2 class="section-title">My <span class="accent">Projects</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Grid Project Cards -->
+            <div class="projects-grid">
+
+                <!-- Project 1: AI Detection - Fruit Ripeness -->
+                <article class="project-card" id="project-yolo">
+                    <div class="project-img-wrapper">
+                        <img src="ProjekAi.png" alt="Proyek Deteksi Kematangan Buah YOLO" class="project-img"
+                            loading="lazy" />
+                        <!-- Sementara disembunyikan
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn" aria-label="Lihat Demo Deteksi Kematangan">🔗 Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="overlay-btn"
+                                aria-label="GitHub Deteksi Kematangan">⭐ GitHub</a>
+                        </div>
+                        -->
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">YOLOv8</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">Proyek Kuliah</span>
+                        </div>
+                        <h3 class="project-title">Deteksi Kematangan Buah 🍌</h3>
+                        <p class="project-desc">
+                            Proyek kuliah berbasis Computer Vision untuk mendeteksi tingkat kematangan buah
+                            menggunakan YOLOv8. Model dapat diaplikasikan ke berbagai jenis buah, namun
+                            difokuskan pada <strong>pisang</strong> agar proses training lebih efisien dan cepat.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 2: WonosoboHub Laravel -->
+                <article class="project-card" id="project-laravel">
+                    <div class="project-img-wrapper">
+                        <img src="WonosoboHub.png" alt="Proyek WonosoboHub" class="project-img" loading="lazy" />
+                        <!-- Sementara disembunyikan
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn" aria-label="Lihat Demo WonosoboHub">🔗 Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="overlay-btn"
+                                aria-label="GitHub WonosoboHub">⭐ GitHub</a>
+                        </div>
+                        -->
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Magang Diskominfo</span>
+                        </div>
+                        <h3 class="project-title">WonosoboHub</h3>
+                        <p class="project-desc">
+                            Aplikasi web informasi pusat daerah Wonosobo yang berisi tentang agenda event,
+                            penginapan, direktori UMKM lokal, dan objek wisata yang ada di Wonosobo, yang diharapkan
+                            dapat membantu wisatawan dalam merencanakan perjalanan mereka.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 3: Portfolio / HTML-CSS -->
+                <article class="project-card" id="project-portfolio">
+                    <div class="project-img-wrapper">
+                        <img src="Porto.png" alt="Proyek Website Portfolio" class="project-img" loading="lazy" />
+                        <!-- Sementara disembunyikan
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn" aria-label="Lihat Demo Portfolio">🔗 Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="overlay-btn"
+                                aria-label="GitHub Portfolio">⭐ GitHub</a>
+                        </div>
+                        -->
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">GitHub Pages</span>
+                        </div>
+                        <h3 class="project-title">Personal Portfolio Website</h3>
+                        <p class="project-desc">
+                            Portofolio profesional yang dirancang untuk merepresentasikan kompetensi, pengalaman, dan
+                            rekam jejak. Dikembangkan secara mandiri (from scratch) dengan HTML5 dan CSS3 untuk
+                            menjamin performa yang optimal.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 4: Currency Converter -->
+                <article class="project-card" id="project-currency">
+                    <div class="project-img-wrapper">
+                        <img src="Currency.png" alt="Proyek Currency Converter" class="project-img" loading="lazy" />
+                        <!-- Sementara disembunyikan
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn" aria-label="Lihat Demo Currency Converter">🔗 Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="overlay-btn"
+                                aria-label="GitHub Currency Converter">⭐ GitHub</a>
+                        </div>
+                        -->
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Debian Linux</span>
+                        </div>
+                        <h3 class="project-title">Currency Converter Web App</h3>
+                        <p class="project-desc">
+                            Aplikasi web konversi mata uang <i>full-stack</i> dengan kapabilitas menarik data secara
+                            dinamis dari database lokal. Di-<i>host</i> secara independen pada <i>web server</i> lokal
+                            (Debian via VirtualBox), lengkap dengan perancangan Local DNS (alfian.com) untuk keperluan
+                            simulasi arsitektur <i>deployment</i> secara nyata.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 5: Website SMP Ibu Kartini -->
+                <article class="project-card" id="project-smp">
+                    <div class="project-img-wrapper">
+                        <img src="SMP.jpg" alt="Proyek Website SMP Ibu Kartini" class="project-img" loading="lazy" />
+                        <!-- Sementara disembunyikan
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn" aria-label="Lihat Demo Website SMP Ibu Kartini">🔗 Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="overlay-btn"
+                                aria-label="GitHub Website SMP Ibu Kartini">⭐ GitHub</a>
+                        </div>
+                        -->
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">XAMPP</span>
+                            <span class="tag">Proyek Kelompok</span>
+                        </div>
+                        <h3 class="project-title">Website SMP Ibu Kartini</h3>
+                        <p class="project-desc">
+                            Mengembangkan website komprehensif profil sekolah (Front-End &amp; pengolahan konten).
+                            Dibangun menggunakan HTML, CSS, dan PHP dengan integrasi XAMPP sebagai server lokal.
+                            Menyajikan elemen dinamis profil instansi, galeri interaktif, serta layanan form kontak
+                            pendukung.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Project 6: E11 SmartClass -->
+                <article class="project-card" id="project-smartclass">
+                    <div class="project-img-wrapper">
+                        <img src="SmartClass.png" alt="Proyek E11 SmartClass" class="project-img" loading="lazy" />
+                        <!-- Sementara disembunyikan
+                        <div class="project-overlay">
+                            <a href="#" class="overlay-btn" aria-label="Lihat Demo E11 SmartClass">🔗 Demo</a>
+                            <a href="https://github.com" target="_blank" rel="noopener" class="overlay-btn"
+                                aria-label="GitHub E11 SmartClass">⭐ GitHub</a>
+                        </div>
+                        -->
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Proyek Kelompok</span>
+                        </div>
+                        <h3 class="project-title">E11 SmartClass</h3>
+                        <p class="project-desc">
+                            Sistem manajemen ruang kelas pintar berbasis web (Full-Stack) yang dikembangkan dengan
+                            metode SDLC untuk mata kuliah Software Engineering. Fokus pengerjaan utama terletak pada
+                            integritas fungsionalitas dan logika back-end (autentikasi & database), sementara desain
+                            antarmuka (UI) masih terus dieksplorasi dan dikembangkan.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== END PROJECTS ===================== -->
+
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact section-padding" id="contact">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-header">
+                <span class="section-label">Hubungi</span>
+                <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <p class="contact-intro">
+                Saya selalu menyambut baik peluang mendiskusikan kolaborasi profesional, inisiatif proyek lintas
+                keilmuan, maupun rekayasa teknologi inovatif. Silakan hubungi saya melalui jalur komunikasi berikut.
+            </p>
+
+            <!-- Card kontak -->
+            <div class="contact-cards">
+
+                <!-- Email -->
+                <a href="mailto:alfianjohn@students.unnes.ac.id" class="contact-card" id="contact-email">
+                    <div class="contact-icon email-contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M2 8L12 14L22 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">alfianjohn@students.unnes.ac.id</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/Alfianjohn" target="_blank" rel="noopener" class="contact-card"
+                    id="contact-github">
+                    <div class="contact-icon github-contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12C2 16.42 4.87 20.17 8.84 21.5C9.34 21.58 9.5 21.27 9.5 21V19.48C6.73 20.09 6.14 18.25 6.14 18.25C5.68 17.07 5.03 16.75 5.03 16.75C4.12 16.13 5.1 16.14 5.1 16.14C6.1 16.21 6.63 17.17 6.63 17.17C7.5 18.7 8.97 18.26 9.54 18C9.63 17.36 9.89 16.92 10.17 16.67C7.95 16.42 5.62 15.57 5.62 11.73C5.62 10.61 6.01 9.7 6.65 8.99C6.55 8.74 6.2 7.7 6.75 6.3C6.75 6.3 7.59 6.03 9.5 7.36C10.29 7.14 11.15 7.03 12 7.03C12.85 7.03 13.71 7.14 14.5 7.36C16.41 6.03 17.25 6.3 17.25 6.3C17.8 7.7 17.45 8.74 17.35 8.99C17.99 9.7 18.38 10.61 18.38 11.73C18.38 15.58 16.04 16.42 13.81 16.66C14.17 16.97 14.5 17.58 14.5 18.5V21C14.5 21.27 14.66 21.59 15.17 21.5C19.14 20.16 22 16.42 22 12C22 6.48 17.52 2 12 2Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/Alfianjohn</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
+
+                <!-- LinkedIn (bonus) -->
+                <a href="https://www.linkedin.com/in/alfian-miftakhul-915922287/" target="_blank" rel="noopener"
+                    class="contact-card" id="contact-linkedin">
+                    <div class="contact-icon linkedin-contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M7 10V17M7 7V7.5" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M11 17V13C11 11.34 12.34 10 14 10C15.66 10 17 11.34 17 13V17" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M11 10V17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/alfian-miftakhul</span>
+                    </div>
+                    <span class="contact-arrow">→</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================== END CONTACT ===================== -->
+
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p class="footer-text">
+                Dibuat oleh <span class="accent">Alfian Miftakhul Yasir</span> &mdash; 2026
+            </p>
+            <p class="footer-sub">
+                Dibangun menggunakan HTML5 &amp; CSS3 · Hosted on GitHub Pages
+            </p>
+        </div>
+    </footer>
+    <!-- ===================== END FOOTER ===================== -->
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
+        // Logika Dark / Light Mode
+        const themeToggle = document.getElementById('theme-toggle');
+        const lightIcon = themeToggle.querySelector('.light-icon');
+        const darkIcon = themeToggle.querySelector('.dark-icon');
+
+        // Fungsi Update Ikon berdasarkan tema dicky
+        function updateIcon() {
+            if (document.documentElement.getAttribute('data-theme') === 'light') {
+                lightIcon.style.display = 'inline-block';
+                darkIcon.style.display = 'none';
+            } else {
+                lightIcon.style.display = 'none';
+                darkIcon.style.display = 'inline-block';
+            }
+        }
+
+        // Jalankan saat load
+        updateIcon();
+
+        // Saat di klik
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            let newTheme = 'dark'; // Secara default ke dark (atau buang attribute)
+
+            if (currentTheme !== 'light') {
+                newTheme = 'light';
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+            }
+            updateIcon();
+        });
+
+        // Logika Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navLinkItems = document.querySelectorAll('.nav-link');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Tutup menu otomatis setelah link diklik
+        navLinkItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
