@@ -931,6 +931,7 @@ ul {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* Penting agar flex item bisa lebih kecil dari konten teksnya */
 }
 
 .contact-label {
@@ -946,6 +947,9 @@ ul {
   font-weight: 500;
   color: var(--clr-text);
   margin-top: 0.15rem;
+  /* Aturan memotong teks panjang yang keluar batas */
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 /* Panah dekoratif */
